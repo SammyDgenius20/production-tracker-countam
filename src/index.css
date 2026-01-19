@@ -1,3 +1,4 @@
+@import "tailwindcss";
 *{
   margin: 0;
   padding: 0;
@@ -31,13 +32,22 @@ a{
  background: #000;
   color: #fff;
 
-  
+
   padding: 12px 25px;
   border: 0;
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
 }
+a.active {
+ /* Blue background */
+  color: white;              /* White text */
+  padding: 5px 15px;        /* Adds space around the text */
+  border-radius: 5px;        /* Rounded corners */
+}
+
+
+
 /* img{
   background: none;
   background-image: none;
@@ -53,4 +63,39 @@ a{
 .container h1{
   font-size: 70px;
   font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 4%;
+    /* Keep flex-row for smaller screens to place button on right */
+    /* flex-direction: column; removed */
+    align-items: center;
+  }
+  .navbar ul {
+    padding: 10px 15px;
+    /* margin-top: 10px; removed */
+  }
+  .navbar ul li {
+    margin: 0 5px;
+    font-size: 14px; /* Smaller font for mobile */
+  }
+  .container h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul li {
+    margin: 0 3px; /* Tighter spacing */
+    font-size: 12px;
+  }
+  .navbar button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .container h1 {
+    font-size: 30px;
+  }
 }

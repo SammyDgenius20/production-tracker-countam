@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="navbar">
       <img src="" alt="" />
       <ul>
-        <Link to="/"><li>Dashboard</li></Link>
-        <Link to="/raw-materials"><li>Raw Materials</li></Link>
-        <Link to="/add-stock"><li>Add Stock</li></Link>
-        <Link to="/reports"><li>Reports</li></Link>
-        <Link to="/login"><li>Login</li></Link>
+        <NavLink to="/"><li>Dashboard</li></NavLink>
+        <NavLink to="/raw-materials"><li>Raw Materials</li></NavLink>
+        <NavLink to="/add-stock"><li>Add Stock</li></NavLink>
+        <NavLink to="/reports"><li>Reports</li></NavLink>
+        <NavLink to="/login"><li>Login</li></NavLink>
       </ul>
       <button>Login</button>
     </div>
