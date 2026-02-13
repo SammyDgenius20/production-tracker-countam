@@ -17,14 +17,26 @@ import RootLayout from "./layout/RootLayout.jsx";
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="login" element={<Login />} />
-        <Route path="add-stock" element={<AddStock />} />
-        <Route path="reports" element={<Reports />} />
-        <Route path="production-record" element={<ProductionRecord />} />
-        <Route path="production-units" element={<ProductionUnits />} />
-        <Route path="raw-materials" element={<RawMaterials />} />
+      <Route path="/">
+        <Route element={<RootLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="login" element={<Login />} />
+          <Route path="add-stock" element={<AddStock />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="production-record" element={<ProductionRecord />} />
+          <Route path="production-units" element={<ProductionUnits />} />
+          <Route path="raw-materials" element={<RawMaterials />} />
+        </Route>
+
+        {/* <Route path="/dashboard" element={<DashboardRootLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="login" element={<Login />} />
+          <Route path="add-stock" element={<AddStock />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="production-record" element={<ProductionRecord />} />
+          <Route path="production-units" element={<ProductionUnits />} />
+          <Route path="raw-materials" element={<RawMaterials />} />
+        </Route> */}
       </Route>,
     ),
     {
