@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -30,7 +31,14 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">Login</button>
+          <NavLink to="/dashboard">
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition duration-300 shadow-md"
+            >
+              Login
+            </button>
+          </NavLink>
         </form>
       </div>
     </div>
